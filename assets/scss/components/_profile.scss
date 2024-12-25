@@ -1,0 +1,166 @@
+.profile {
+    &-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .icon {
+            width: 100px;
+        }
+
+        &-user {
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+    }
+
+    &-small {
+        width: 25px;
+    }
+
+    &-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 16%);
+        gap: .75rem;
+        justify-content: center;
+        margin-bottom: 1rem;
+        .grid-item {
+            position: relative;
+            @include gradient(to bottom, #000, rgba(color('primary'), .25));
+            border-radius: .5rem;
+            &-container {
+                height: 275px;
+                padding: 1rem;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+                text-decoration: none;
+                h2 {
+                    font-size: 1.35rem;
+                    margin-top: 1rem;text-overflow:ellipsis;
+                    overflow:hidden;
+                    // Addition lines for 2 line or multiline ellipsis
+                    display: -webkit-box !important;
+                    -webkit-line-clamp: 2;
+                    line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    -moz-box-orient: vertical;
+                    white-space: normal;
+                }
+                p {
+                    color: color('font');
+                }
+
+                &:hover,
+                &:focus {
+                    h2 {
+                        color: color('primary');
+                    }
+                }
+            }
+        }
+    }
+
+
+    &-body-container {
+        display: grid;
+        grid-template-columns: 100%;
+        column-gap: 1.5rem;
+        row-gap: 1.5rem;
+        min-height: 50vh;
+        &-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            img {
+                width: 100px;
+                margin-bottom: 1rem;
+            }
+        }
+
+        &-right {
+            
+        }
+    }
+}
+
+@include breakpoint-up('lg') {
+    .profile {
+        &-header {
+            flex-direction: row;
+            &-user {
+                margin-left: 2rem;
+                width: 100%;
+                max-width: 300px;
+                text-align: unset;
+            }
+
+            margin-bottom: 4rem;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .profile {
+        &-grid {
+            grid-template-columns: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .profile {
+        &-grid {
+            grid-template-columns: repeat(2, 48%);
+        }
+    }
+}
+
+@include breakpoint-up('sm') {
+    .profile {
+        &-grid {
+            grid-template-columns: repeat(3, 31%);
+        }
+    }
+}
+
+@include breakpoint-up('md') {
+    .profile {
+        &-grid {
+            grid-template-columns: repeat(4, 24%);
+        }
+    }
+}
+
+@include breakpoint-up('lg') {
+    .profile {
+        &-grid {
+            grid-template-columns: repeat(5, 19%);
+        }
+
+        &-body-container {
+            grid-template-columns: repeat(2, 48%);
+            &-left {
+                text-align: left;
+                flex-direction: row;
+                // justify-content: center;
+                // align-items: flex-start;
+                img {
+                    margin-right: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint-up('xl') {
+    .profile {
+        &-grid {
+            grid-template-columns: repeat(6, 16%);
+        }
+    }
+}

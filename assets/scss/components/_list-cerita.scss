@@ -1,0 +1,147 @@
+.list {
+    &-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 16%);
+        grid-gap: .75rem;
+        justify-content: center;
+
+        .grid-item {
+            height: 275px;
+            position: relative;
+            &-thumbnail {
+                width: 100%;
+                border-radius: .5rem;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &-body {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                z-index: 5;
+                top: 0;
+                left: 0;
+                padding: 1rem;
+                display: flex;
+                color: color('font');
+                text-decoration: none;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-start;
+                @include gradient3(to top, #000, rgba(#000, .75), transparent);
+                h3, p {
+                    display: block;
+                    overflow-x: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    width: 100%;
+                }
+
+                &:hover,
+                &:focus {
+                    h3 {
+                        color: color('primary');
+                    }
+                }
+            }
+
+            &-bottom {
+                display: flex;
+                align-items: center;
+                padding: .5rem 0;
+                small {
+                    margin-right: 1rem;
+                }
+            }
+
+            &-author {
+                .icon {
+                    margin-right: .25rem;
+                    width: 20px;
+                }
+                display: block;
+                overflow-x: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: 100%;
+                font-size: .8rem;
+            }
+        }
+    }
+
+    &-pageination {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        li {
+            width: 35px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            a {
+                text-decoration: none;
+                color: color('font');
+            }
+
+            &:hover,
+            &:focus {
+                a {
+                    color: color('headline');
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .list {
+        &-grid {
+            grid-template-columns: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .list {
+        &-grid {
+            grid-template-columns: repeat(2, 48%);
+        }
+    }
+}
+
+@include breakpoint-up('sm') {
+    .list {
+        &-grid {
+            grid-template-columns: repeat(3, 31%);
+        }
+    }
+}
+
+@include breakpoint-up('md') {
+    .list {
+        &-grid {
+            grid-template-columns: repeat(4, 24%);
+        }
+    }
+}
+
+@include breakpoint-up('lg') {
+    .list {
+        &-grid {
+            grid-template-columns: repeat(5, 19%);
+        }
+    }
+}
+
+@include breakpoint-up('xl') {
+    .list {
+        &-grid {
+            grid-template-columns: repeat(6, 16%);
+        }
+    }
+}

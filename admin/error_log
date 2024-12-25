@@ -1,0 +1,2 @@
+[25-Aug-2021 03:30:52 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home8/horrors1/public_html/admin/index.php on line 260
+[26-Aug-2021 11:56:28 UTC] PHP Warning:  unlink(../assets/img/thumbnail-cerita/): Is a directory in /home8/horrors1/public_html/admin/index.php on line 324

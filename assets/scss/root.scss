@@ -1,0 +1,21 @@
+@import './breakpoints';
+@import './mixins';
+@import './variables';
+@import './globals';
+@import './typography';
+
+// Components
+@import './components/navbar';
+@import './components/hero';
+@import './components/list-cerita';
+@import './components/footer';
+@import './components//profile';
+
+// layout
+@import './layout/form';
+@import './layout/cerita';
+
+// Pages
+@import './pages/cerita/buat';
+@import './pages//donasi';
+@import './pages//error404';

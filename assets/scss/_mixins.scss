@@ -1,0 +1,15 @@
+@mixin gradient($to, $one, $two) {
+  background: linear-gradient($to, $one, $two);
+  background: -webkit-linear-gradient($to, $one, $two);
+  background: -moz-linear-gradient($to, $one, $two);
+  background: -ms-linear-gradient($to, $one, $two);
+  background: -o-linear-gradient($to, $one, $two);
+}
+
+@mixin gradient3($to, $one, $two, $three) {
+  background: linear-gradient($to, $one, $two, $three);
+  background: -webkit-linear-gradient($to, $one, $two, $three);
+  background: -moz-linear-gradient($to, $one, $two, $three);
+  background: -ms-linear-gradient($to, $one, $two, $three);
+  background: -o-linear-gradient($to, $one, $two, $three);
+}

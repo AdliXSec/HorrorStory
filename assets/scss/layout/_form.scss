@@ -1,0 +1,68 @@
+.form {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+
+    &-background {
+        width: 100%;
+        height: 99vh;
+        object-fit: cover;
+        opacity: 0.15;
+        filter: grayscale(100%);
+    }
+
+    &-logo {
+        width: 250px;
+    }
+
+    .container {
+        position: absolute;
+        z-index: 5;
+        width: 90%;
+        max-width: 375px;
+        text-align: center;
+        margin-top: 6rem;
+    }
+
+    &-group {
+        width: 100%;
+        margin: .5rem 0;
+        label {
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+        input {
+            display: block;
+            width: 100%;
+            padding: .6rem 1rem;
+            border: .075rem solid color('font');
+            background-color: transparent;
+            border-radius: .5rem;
+            margin-top: .5rem;
+            outline: 0;
+            color: color('headline');
+            &:hover,
+            &:focus {
+                border-color: color('headline');
+            }
+        }
+    }
+
+    &-submit {
+        padding: .6rem 1rem;
+        width: 100%;
+        border-radius: .5rem;
+        background-color: color('primary');
+        color: color('headline');
+        border: 0;
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+    }
+}

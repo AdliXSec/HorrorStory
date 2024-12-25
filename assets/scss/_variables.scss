@@ -1,0 +1,11 @@
+$colors: (
+    'background': #000,
+    'headline': #fafaff,
+    'font': #cacacf,
+    'primary': #ff0505,
+    'success': #22ff05
+);
+
+@function color($key) {
+    @return map-get($colors, $key);
+}

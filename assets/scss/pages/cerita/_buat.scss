@@ -1,0 +1,36 @@
+.buat {
+    &-form {
+        margin-top: 2rem;
+        &-group {
+            margin-bottom: 1.5rem;
+            label {
+                display: block;
+                width: 100%;
+            }
+
+            input,
+            textarea {
+                margin-top: .5rem;
+                padding: .65rem 1rem;
+                border-radius: .5rem;
+                display: block;
+                width: 100%;
+                border: 0;
+                // background-color: lighten(color('background'), 10%);
+                // color: color('font');
+                background-color: color('headline');
+                color: color('background');
+            }
+        }
+
+        [type=submit] {
+            padding: .65rem 1.25rem;
+            width: 100%;
+            border: 0;
+            display: block;
+            background-color: color('primary');
+            color: color('headline');
+            border-radius: .5rem;
+        }
+    }
+}
